@@ -2,7 +2,7 @@
   "name": "01.ignittingfirstapp",
   "version": "1.0.0",
   "description": "My first parcel app",
-  "main": "index.js",
+  "main": "app.js",
   "scripts": {
     "test": "jest"
   },
