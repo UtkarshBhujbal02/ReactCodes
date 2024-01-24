@@ -9,8 +9,7 @@ import Contact from "../components/Contact";
 import RestaurantMenu from "../components/RestaurantMenu";
 import Profile from "../components/ProfileClass";
 
-const About = lazy(()=>import("../components/About"));
-
+const About = lazy(() => import("../components/About"));
 
 const AppLayout = () => {
   return (
@@ -34,11 +33,17 @@ const appRouter = createBrowserRouter([
       },
       {
         path: "/about",
-        element: <Suspense fallback={<h1>Loading...</h1>}><About /></Suspense>,
-        children:[{
-          path:"profile",
-          element:<Profile />
-        }]
+        element: (
+          <Suspense fallback={<h1>Loading...</h1>} >
+            <About />
+          </Suspense>
+        ),
+        children: [
+          {
+            path: "profile",
+            element: <Profile />,
+          },
+        ],
       },
       {
         path: "/contact",
@@ -46,7 +51,7 @@ const appRouter = createBrowserRouter([
       },
       {
         path: "/restaurant/:resId",
-        element: <RestaurantMenu/>,
+        element: <RestaurantMenu />,
       },
     ],
   },
