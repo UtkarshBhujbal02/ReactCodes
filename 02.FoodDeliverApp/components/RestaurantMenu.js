@@ -4,7 +4,7 @@ import Shimmer from "./Shimmer";
 import { useEffect, useState } from "react";
 import { swiggy_menu_api_URL } from "../src/Constants";
 import { MENU_ITEM_TYPE_KEY, RESTAURANT_TYPE_KEY } from "../src/Constants";
-import useRestaurant from "../utils/useRestaurant";
+import useRestaurant from "../utils/useRestaurantMenu";
 
 const RestaurantMenu = () => {
   const { resId } = useParams();
